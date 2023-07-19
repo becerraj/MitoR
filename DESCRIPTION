@@ -1,0 +1,15 @@
+Package: MitoR
+Title: A tool that allows searching, annotating, detecting and visualizing SNPs, indels and CNVs in the mitochondrial genome.
+Version: 0.0.0.9000
+Authors@R: 
+    person("Juan Cruz", "Becerra", , "becerrajcruz@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Daniela", "Orschanski", , "daniorsch@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Mito R detects genetic alterations in the mtADN and links them to different well known databases like Hmtvar, Franklin and VarSome.
+It involves functions of softwares: GATK, BWA, Samtools, Picard and ExomeDepth. And provides a local database that saves the results obtained in order to make both, single and population based scenarios.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
