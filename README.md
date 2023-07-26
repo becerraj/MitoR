@@ -1,14 +1,13 @@
 # MitoR
 
 ## Description
-MitoR is a R package designed to detect single nucleotide polymorphisms (SNPs), insertions and deletions (indels), and copy number variations (CNVs) in the mitochondrial genome. 
+MitoR is an efficient R package designed to detect single nucleotide polymorphisms (SNPs), insertions and deletions (indels), and copy number variations (CNVs) in the mitochondrial genome. 
 
-This software provides a user-friendly tool that simplifies the execution of alignment, mapping, sorting, indexing, quality controls, detection, and visualization of SNPs, indels, and CNVs. 
+This software offers a user-friendly tool that simplifies the execution of alignment, mapping, sorting, indexing, quality controls, detection, and visualization of SNPs, indels, and CNVs. 
 
 Additionally, MitoR generates comprehensive reports that not only indicate the detected variations but also associates them with widely recognized databases such as HmtVar, VarSome, Franklin, and dbSNP. Moreover, it allows users to save all the obtained results, facilitating the creation of a local database for population analysis.
 
-Users do not require advanced computer knowledge to utilize MitoR effectively.
-
+The best part is that users do not need advanced computer knowledge to effectively use MitoR.
 
 ## Requirements
 1. You must work on a Linux environment.
