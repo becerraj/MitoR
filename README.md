@@ -8,7 +8,7 @@ Users do not require advanced computer knowledge to utilize MitoR effectively.
 ## Instalation
 To install this package execute the following command: 
 
-remotes::install_github("DaniOrschanski/MitoR")
+`remotes::install_github("DaniOrschanski/MitoR")`
 
 ## Requirements
 1. You must work on a Linux environment.
