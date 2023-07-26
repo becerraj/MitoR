@@ -9,6 +9,16 @@ Additionally, MitoR generates comprehensive reports that not only indicate the d
 
 The best part is that users do not need advanced computer knowledge to effectively use MitoR.
 
+------------------------------------------------------------------------------------------------------
+MitoR is a bioinformatic tool designed for detecting mitochondrial genome rearrangements. It offers a user-friendly analysis of single nucleotide polymorphisms (SNPs), insertions and deletions (indels), and copy number variations (CNVs) starting sequencing data. 
+
+The software seamlessly integrates information from reputable databases like HMTVAR, VarSome, Franklin, and dbSNP, providing reliable and context-rich results. 
+
+Additionally, MitoR presents visual representations for easy interpretation and generates a local database, enhancing the accuracy and accessibility of variant annotation. 
+
+With its comprehensive features, MitoR empowers geneticists to gain valuable insights into the intricacies of the mitochondrial genome.
+And the best part is that users do not need advanced computer knowledge to effectively use MitoR.
+
 ## Requirements
 1. You must work on a Linux environment.
    
