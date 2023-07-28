@@ -14,19 +14,19 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports:
-    tidyverse
-    openxlsx
-    stringr
-    ggplot2
-    rjson
-    rstudioapi
-    tibble
-    tidyverse
-    showtext
-    dplyr
-    ggtext
-    readxl
-    magrittr
-    httr
-    Rsamtools
+    tidyverse,
+    openxlsx,
+    stringr,
+    ggplot2,
+    rjson,
+    rstudioapi,
+    tibble,
+    tidyverse,
+    showtext,
+    dplyr,
+    ggtext,
+    readxl,
+    magrittr,
+    httr,
+    Rsamtools,
     ExomeDepth
