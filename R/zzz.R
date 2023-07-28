@@ -213,8 +213,8 @@ downloadHG38 <- function(mitor_sof) {
 #' In case it occurs an error because of a missing package on your Linux OS, a message will be displayed on the terminal letting you know which packages must be available to download the software.
 downloadMitoRSoftwares <- function(mitor_sof) {
 
-  #libPath <- dirname(system.file(package = "MitoR"))
-  libPath <- Sys.getenv('R_LIBS_USER')
+  libPath <- dirname(system.file(package = "MitoR"))
+  #libPath <- Sys.getenv('R_LIBS_USER')
   mitor_sof <- sprintf("%s/mitorDB/Softwares", libPath)
   #setwd(mitor_sof)
   #wd <<- getwd()
@@ -392,8 +392,8 @@ On the Linux command-line print:
 
 checkDownloads <- function() {
 
-  #libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
-  libPath <- Sys.getenv('R_LIBS_USER')
+  libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
+  #libPath <- Sys.getenv('R_LIBS_USER')
   print(libPath)
 
   if (!(file.exists(sprintf("%s/mitorDB", libPath)))) {
@@ -454,8 +454,8 @@ checkDownloads <- function() {
 checkHMTVAR_online <- function() {
 
   if (!httr::http_error(httr::GET("https://www.google.com"))) {
-    #libPath <- dirname(system.file(package = "MitoR"))
-    libPath <- Sys.getenv('R_LIBS_USER')
+    libPath <- dirname(system.file(package = "MitoR"))
+    #libPath <- Sys.getenv('R_LIBS_USER')
     mitor_db <- sprintf("%s/mitorDB/DB", libPath)
 
     if ("RDS_DB.rds" %in% list.files(mitor_db)) {
