@@ -17,7 +17,7 @@
 
   #mitor_files <- path.expand("~")
 
-  #check_packages()
+  check_packages()
   checkDownloads()
   message("Softwares DONE")
 
@@ -26,9 +26,9 @@
 }
 
 check_packages <- function() {
-  if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
-    remotes::install_cran("ExomeDepth")
-  }
+  #if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
+  #  remotes::install_cran("ExomeDepth")
+  #}
   if (!requireNamespace("openxlsx", quietly = TRUE)) {
     remotes::install_cran("openxlsx")
   }
@@ -68,9 +68,9 @@ check_packages <- function() {
   if (!requireNamespace("httr", quietly = TRUE)) {
     remotes::install_cran("httr")
   }
-  if (!requireNamespace("Rsamtools", quietly = TRUE)) {
-    remotes::install_cran("Rsamtools")
-  }
+  #if (!requireNamespace("Rsamtools", quietly = TRUE)) {
+  #  remotes::install_cran("Rsamtools")
+  #}
   message("The R packages required have been successfully installed")
 }
 
