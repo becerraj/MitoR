@@ -1,5 +1,5 @@
 .onLoad <- function(libname, pkgname) {
-
+  message("WELCOME TO MITOR!!")
   #BWA <- downloadBWA() necesito "rpm2cpio", "cpio"
 
   #Import BED file
