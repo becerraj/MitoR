@@ -5,6 +5,7 @@
 
   #Import BED file
   data("bedfileMito")
+  message("bed cargado")
 
   #Esto se borra:
   #Sys.getenv('R_LIBS_USER')
@@ -212,7 +213,8 @@ downloadHG38 <- function(mitor_sof) {
 #' In case it occurs an error because of a missing package on your Linux OS, a message will be displayed on the terminal letting you know which packages must be available to download the software.
 downloadMitoRSoftwares <- function(mitor_sof) {
 
-  libPath <- dirname(system.file(package = "MitoR"))
+  #libPath <- dirname(system.file(package = "MitoR"))
+  libPath <- Sys.getenv
   mitor_sof <- sprintf("%s/mitorDB/Softwares", libPath)
   #setwd(mitor_sof)
   #wd <<- getwd()
