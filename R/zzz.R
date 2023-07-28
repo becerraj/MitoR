@@ -17,7 +17,7 @@
 
   #mitor_files <- path.expand("~")
 
-  check_packages()
+  #check_packages()
   checkDownloads()
   message("Softwares DONE")
 
