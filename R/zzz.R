@@ -28,9 +28,9 @@
 }
 
 check_packages <- function() {
-  #if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
-  #  remotes::install_cran("ExomeDepth")
-  #}
+  if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
+    remotes::install_cran("ExomeDepth")
+  }
   if (!requireNamespace("openxlsx", quietly = TRUE)) {
     remotes::install_cran("openxlsx")
   }
