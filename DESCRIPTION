@@ -27,6 +27,4 @@ Imports:
     ggtext,
     readxl,
     magrittr,
-    httr,
-    Rsamtools,
-    ExomeDepth
+    httr
