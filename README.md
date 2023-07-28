@@ -25,8 +25,11 @@ To install this package execute the following command:
 
 `remotes::install_github(".../MitoR")`
 
-
 ## Authors
-- Engr. Juan Cruz Becerra
-- Engr. Daniela Orschanski
-- Dr. Engr. Elmer Andrés Fernández.
+* **Elmer Andrés Fernández** - *Initial work & Idea* - [Profile](https://www.researchgate.net/profile/Elmer_Fernandez) - [CIDIE]- [CONICET](http://www.conicet.gov.ar) - [Fundación para el Progreso de la Medicina - FPM](https://fpmlab.org.ar/)
+* **Ing. Biom. Juan Becerra** -*Developer & Maintener
+* **Ing. Biom. Daniela Orchansky** -*Developer & Maintener
+## Collaborators
+* **Horacio Martinetto** - *Genetic Advisor application [Profile](https://www.fleni.org.ar/profesionales/martinetto-horacio/), [FLENI](https://www.fleni.org.ar/)
+* **Agata Fernandez** - *Genetic Advisor application [FLENI](https://www.fleni.org.ar/)
+
