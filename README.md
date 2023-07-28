@@ -1,4 +1,4 @@
-# MitoR
+# MitoR: The complete Whole Genome Mitochondrial Analisys Toolkint in R.  
 
 ## Description
 MitoR is a bioinformatic tool designed for detecting mitochondrial genome rearrangements. It offers a user-friendly analysis of single nucleotide polymorphisms (SNPs), insertions and deletions (indels), and copy number variations (CNVs) starting sequencing data. 
