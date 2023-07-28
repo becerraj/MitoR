@@ -214,7 +214,7 @@ downloadHG38 <- function(mitor_sof) {
 downloadMitoRSoftwares <- function(mitor_sof) {
 
   #libPath <- dirname(system.file(package = "MitoR"))
-  libPath <- Sys.getenv
+  libPath <- Sys.getenv('R_LIBS_USER')
   mitor_sof <- sprintf("%s/mitorDB/Softwares", libPath)
   #setwd(mitor_sof)
   #wd <<- getwd()
@@ -392,7 +392,8 @@ On the Linux command-line print:
 
 checkDownloads <- function() {
 
-  libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
+  #libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
+  libPath <- Sys.getenv('R_LIBS_USER')
   print(libPath)
 
   if (!(file.exists(sprintf("%s/mitorDB", libPath)))) {
@@ -453,7 +454,8 @@ checkDownloads <- function() {
 checkHMTVAR_online <- function() {
 
   if (!httr::http_error(httr::GET("https://www.google.com"))) {
-    libPath <- dirname(system.file(package = "MitoR"))
+    #libPath <- dirname(system.file(package = "MitoR"))
+    libPath <- Sys.getenv('R_LIBS_USER')
     mitor_db <- sprintf("%s/mitorDB/DB", libPath)
 
     if ("RDS_DB.rds" %in% list.files(mitor_db)) {
