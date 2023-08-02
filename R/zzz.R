@@ -61,33 +61,34 @@ check_packages <- function() {
 }
 
 checkRequirements <- function() {
-  OS <- tolower(system2("lsb_release", "-d", stdout = TRUE))
+  #OS <- tolower(system2("lsb_release", "-d", stdout = TRUE))
   # For Ubuntu
-  if (grepl("ubuntu", OS) || grepl("kali", OS) ||
-      grepl("mint", OS) || grepl("oracle", OS)){
-    needed_packages_ubuntu <- c("bzip2", "libncurses5-dev", "unzip", "rpm2cpio", "cpio", "gzip", "tar", "wget", "java")
-    for (i in needed_packages_ubuntu) {
-      reply <- paste(system2("dpkg", sprintf("-s %s", i), stdout = TRUE), collapse = " ")
-      if (grepl("Status: install ok installed", reply, ignore.case = TRUE)) {
-        index <- grep(sprintf("%s", i), needed_packages_ubuntu)
-        needed_packages_ubuntu[-index]
-      }
-    }
+  #if (grepl("ubuntu", OS) || grepl("kali", OS) ||
+  #    grepl("mint", OS) || grepl("oracle", OS)){
+  #  needed_packages_ubuntu <- c("bzip2", "libncurses5-dev", "unzip", "rpm2cpio", "cpio", "gzip", "tar", "wget", "java")
+  #  for (i in needed_packages_ubuntu) {
+  #    reply <- paste(system2("dpkg", sprintf("-s %s", i), stdout = TRUE), collapse = " ")
+  #    if (grepl("Status: install ok installed", reply, ignore.case = TRUE)) {
+  #      index <- grep(sprintf("%s", i), needed_packages_ubuntu)
+  #      needed_packages_ubuntu[-index]
+  #    }
+  #  }
     # For RedHat
-  } else if (grepl("redhat", OS) || grepl("fedora", OS) ||
-             grepl("centos", OS)) {
-    needed_packages_rpm <- c("bzip2", "ncurses-devel", "unzip", "rpm2cpio", "cpio", "gzip", "tar", "wget", "java")
-    for (i in needed_packages_rpm) {
-      reply <- paste(system2("rpm", sprintf("-q %s", i), stdout = TRUE), collapse = " ")
-      # A chequear que realmente devuelva esta afirmacion
-      if (!grepl("is not installed", reply, ignore.case = TRUE)) {
-        index <- grep(sprintf("%s", i), needed_packages_rpm)
-        needed_packages_rpm[-index]
-      }
-      needed_packages <- needed_packages_rpm
-    }
-  }
-  return(needed_packages)
+  #} else if (grepl("redhat", OS) || grepl("fedora", OS) ||
+  #           grepl("centos", OS)) {
+  #  needed_packages_rpm <- c("bzip2", "ncurses-devel", "unzip", "rpm2cpio", "cpio", "gzip", "tar", "wget", "java")
+  #  for (i in needed_packages_rpm) {
+  #    reply <- paste(system2("rpm", sprintf("-q %s", i), stdout = TRUE), collapse = " ")
+      
+  #    if (!grepl("is not installed", reply, ignore.case = TRUE)) {
+  #      index <- grep(sprintf("%s", i), needed_packages_rpm)
+  #      needed_packages_rpm[-index]
+  #    }
+  #    needed_packages <- needed_packages_rpm
+  #  }
+  #}
+  #return(needed_packages)
+  return("req")
 }
 
 
