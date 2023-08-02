@@ -34,4 +34,5 @@ install_github("DaniOrschanski/MitoR")
 ## Collaborators
 * **Horacio Martinetto** - *Genetic Advisor application [Profile](https://www.fleni.org.ar/profesionales/martinetto-horacio/), [FLENI](https://www.fleni.org.ar/)
 * **Agata Fernandez** - *Genetic Advisor application [FLENI](https://www.fleni.org.ar/)
+* **Juan Carloz Vazquez** - *Developer advisor
 
