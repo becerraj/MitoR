@@ -3,7 +3,7 @@
   #Import BED file
   data("bedfileMito")
 
-  check_packages()
+  #check_packages()
   checkDownloads()
   message("Softwares DONE")
 
