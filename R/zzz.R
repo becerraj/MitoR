@@ -54,9 +54,9 @@ check_packages <- function() {
   if (!requireNamespace("httr", quietly = TRUE)) {
     remotes::install_cran("httr")
   }
-  if (!requireNamespace("Rsamtools", quietly = TRUE)) {
-    remotes::install_cran("Rsamtools")
-  }
+  #if (!requireNamespace("Rsamtools", quietly = TRUE)) {
+  #  remotes::install_cran("Rsamtools")
+  #}
   message("The R packages required have been successfully installed")
 }
 
