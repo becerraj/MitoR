@@ -88,7 +88,7 @@ checkRequirements <- function() {
   #  }
   #}
   #return(needed_packages)
-  return("req")
+  return(NULL)
 }
 
 
