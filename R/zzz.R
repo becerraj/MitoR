@@ -3,7 +3,7 @@
   #Import BED file
   data("bedfileMito")
 
-  #check_packages()
+  check_packages()
   checkDownloads()
   message("Softwares DONE")
 
@@ -12,9 +12,9 @@
 }
 
 check_packages <- function() {
-  if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
-    remotes::install_cran("ExomeDepth")
-  }
+  #if (!requireNamespace("ExomeDepth", quietly = TRUE)) {
+  #  remotes::install_cran("ExomeDepth")
+  #}
   if (!requireNamespace("openxlsx", quietly = TRUE)) {
     remotes::install_cran("openxlsx")
   }
