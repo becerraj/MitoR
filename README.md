@@ -16,16 +16,17 @@ And the best part is that users do not need advanced computer knowledge to effec
    
 3. Download the following Linux packages: "lsb_release", "bzip2", "libncurses5-dev"(for Ubuntu/Kali) or "ncurses-devel" (for Redhat/Fedora) , "unzip", "rpm2cpio", "cpio", "gzip", "tar", "wget", "java".
    
-5. Download the R package: devtools.
-   
-7. Organize each FASTA/FASTQ file of the patient in one unique folder which name must be the id of the correspondant patient.
+4. Organize each FASTA/FASTQ file of the patient in one unique folder which name must be the id of the correspondant patient.
 
 
 ## Installation
 To install this package execute the following command: 
 
-`remotes::install_github(".../MitoR")`
-
+```
+install.packages("devtools")
+library(devtools)
+install_github("DaniOrschanski/MitoR")
+```
 ## Authors
 * **Elmer Andrés Fernández** - *Initial work & Idea* - [Profile](https://www.researchgate.net/profile/Elmer_Fernandez) - [CIDIE]- [CONICET](http://www.conicet.gov.ar) - [Fundación para el Progreso de la Medicina - FPM](https://fpmlab.org.ar/)
 * **Ing. Biom. Juan Becerra** -*Developer & Maintener
