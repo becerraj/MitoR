@@ -17,7 +17,7 @@ initialize_db <- function() {
 
     dir.create(sprintf("%s/mitorDB/DB", Sys.getenv('R_LIBS_USER')))
 
-    wb1 <- data.frame("Gene" = bed[, 4])
+    wb1 <- data.frame()
     wb2 <- data.frame("Gene" = bed[, 4])
     wb3 <- data.frame()
 
