@@ -11,18 +11,17 @@
 #' GenesDB <- initial[[3]]
 
 initialize_db <- function() {
+  data("bedfileMito")
 
-  #libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
+  if (!(file.exists(sprintf("%s/mitorDB/DB/cnvDB.RDS", Sys.getenv('R_LIBS_USER'))))) {
 
-  if (!(file.exists(sprintf("%s/mitorDB", Sys.getenv('R_LIBS_USER'))))) {
+    dir.create(sprintf("%s/mitorDB/DB", Sys.getenv('R_LIBS_USER')))
 
-    dir.create(sprintf("%s/mitorDB", dir_lib))
-
-    wb1 <- data.frame()
-    wb2 <- data.frame()
+    wb1 <- data.frame("Gene" = bed[, 4])
+    wb2 <- data.frame("Gene" = bed[, 4])
     wb3 <- data.frame()
 
-    saveRDS(list(wb1, wb2, wb3), file = paste(dir_lib, "/mitorDB/DB/cnvDB.RDS", sep=""))
+    saveRDS(list(wb1, wb2, wb3), file = paste(Sys.getenv('R_LIBS_USER'), "/mitorDB/DB/cnvDB.RDS", sep=""))
     message("Data Bases have been created. You can find them in mitorDB folder")
   }
 
