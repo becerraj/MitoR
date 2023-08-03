@@ -378,7 +378,10 @@ checkDownloads <- function() {
 
   libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
   print(libPath)
-
+  if (!(grepl("linux", libPath, ignore.case = TRUE))) {
+    return(NULL)
+  }
+  
   if (!(file.exists(sprintf("%s/mitorDB/Softwares/BWA", libPath))) |
       !(file.exists(sprintf("%s/mitorDB/Softwares/Samtools", libPath))) |
       !(file.exists(sprintf("%s/mitorDB/Softwares/RefHG38", libPath)))
