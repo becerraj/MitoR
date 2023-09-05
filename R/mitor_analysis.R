@@ -96,14 +96,18 @@ mitor_analysis <- function(path_dir, cnv_minoverlap = 0.0001, cnv_transit = 1, Q
   addWorksheet(wb_complete, sheetName = "Plot_Mut")
   for (i in 1:length(plots_to_xlsx)) { # i is related to the X axis
     for (j in 1:length(plots_to_xlsx[[i]])) { # j is related to the Y axis
-      #print(plots_to_xlsx[[i]][[j]])
-      #replayPlot(plots_to_xlsx[[i]][[j]])
-      #openxlsx::insertPlot(wb_complete, 2, xy = c((i*9)-8, (j*23)-21), width = 18.5, height = 12, fileType = "png", units = "cm")
+      print(plots_to_xlsx[[i]][[j]])
+      replayPlot(plots_to_xlsx[[i]][[j]])
+      openxlsx::insertPlot(wb_complete, 2, xy = c((i*9)-8, (j*23)-21), width = 18.5, height = 12, fileType = "png", units = "cm")
 
-      png("graph.png", width = 18.5, height = 12, units = "cm", res = 144)
-      print(plots_to_xlsx[[i]][j])
-      dev.off()
-      insertImage(wb_complete, 2, "graph.png", width = 18.5, height = 12, startRow = (i*9)-8, startCol = (j*23)-21, units = "cm")
+      #png(sprintf("%s/MitoR/graph_mut.png", path_dir), width = 18.5, height = 12, units = "cm", res = 144)
+      #print(plots_to_xlsx[[i]][j])
+      #dev.off()
+
+      #if (file.exists()) {
+      #  insertImage(wb_complete, 2, sprintf("%s/MitoR/graph_mut.png", path_dir), width = 18.5, height = 12, startRow = (i*9)-8, startCol = (j*23)-21, units = "cm")
+      #  system2("rm", sprintf("%s/MitoR/graph_mut.png", path_dir))
+      #}
     }
   }
 
@@ -143,12 +147,16 @@ mitor_analysis <- function(path_dir, cnv_minoverlap = 0.0001, cnv_transit = 1, Q
 
   #CNV's Visualization Sheet
   addWorksheet(wb_complete, sheetName = "Plot_CNV")
-  #print(graph)
-  #insertPlot(wb_complete, "Plot_CNV", xy = c(1, 1), width = 25, height = 18, fileType = "png", units = "cm")
-  png("graphcnv.png", width=1024, height=768, units="px", res=144)
   print(graph)
-  dev.off()
-  insertImage(wb_complete, "Plot_CNV", "graphcnv.png", width = 25, height = 18, units="cm")
+  insertPlot(wb_complete, "Plot_CNV", xy = c(1, 1), width = 25, height = 18, fileType = "png", units = "cm")
+  #png(sprintf("%s/MitoR/graph_cnv.png", path_dir), width=1024, height=768, units="px", res=144)
+  #print(graph)
+  #dev.off()
+
+  #if (file.exists()) {
+  #  insertImage(wb_complete, 2, sprintf("%s/MitoR/graph_cnv.png", path_dir), width = 18.5, height = 12, startRow = (i*9)-8, startCol = (j*23)-21, units = "cm")
+  #  system2("rm", sprintf("%s/MitoR/graph_cnv.png", path_dir))
+  #}
 
   #Software's Information Sheet
   if(class(wb2) == "data.frame") {

@@ -42,10 +42,10 @@ plot_cnv <- function(CNV_calls) {
     theme_classic() +
     theme(axis.text.y = element_markdown(color = todo$col),
           axis.text.y.right = element_blank(),
-          axis.text.y.left = element_text(vjust = 1, size= 14),
-          axis.title = element_text(size = 25),
-          axis.text = element_text(size = 25),
-          axis.text.x = element_text(size = 25) )
+          axis.text.y.left = element_text(vjust = 1, size= 30),
+          axis.title = element_text(size = 50),
+          axis.text = element_text(size = 50),
+          axis.text.x = element_text(size = 50) )
   graph
   #plot_cnv<- recordPlot()
   return(graph)

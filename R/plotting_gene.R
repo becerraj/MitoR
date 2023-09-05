@@ -190,8 +190,12 @@ plot_gene_design <- function(allelic_coverage, mutations_at_genes) {
 
   print(max(Counts))
 
-  plot(Position, Counts, type = "l", col = "black", main = mutations_at_genes$gene, ylim = c(0, max(Counts)))
+  plot(Position, Counts, type = "l", col = "black", ylim = c(0, max(Counts)))
   lines(Position, ALT_counts, type = "o", col = "red") # Same values for X axis
+  title(main = mutations_at_genes$gene,
+        xlab = "Counts",
+        ylab = "Positon",
+        cex.axis = 3, cex.lab = 3, cex.main = 3)
 
   # Legend
   legend("bottomleft", legend = c("Total Counts", "ALT Counts"), col = c("black", "red"), lty = 1, cex = 0.5)
@@ -203,7 +207,7 @@ plot_gene_design <- function(allelic_coverage, mutations_at_genes) {
   # Mutations
   for (i in (1:length(mutations_in_gen[[1]]))) {
     mtext(mutations_in_gen[[1]][i], side = 3, adj = 1,
-          line = (length(mutations_in_gen[[1]]) - i))
+          line = (length(mutations_in_gen[[1]]) - i), cex = 20)
   }
 
   plot_of_gene <- recordPlot()
@@ -231,13 +235,18 @@ plot_mutation_design <- function(data_mutation_plot, alternative_base, range) {
   mutation <- sprintf("%s>%s>%s", data_mutation_plot$REF[(nrow(data_mutation_plot)/2)+0.5], data_mutation_plot$POS[(nrow(data_mutation_plot)/2)+0.5], alternative_base)
 
   # First line of plot: REF sequence
-  plot(Position, Counts, type = "b", pch = data_mutation_plot$REF, col = "black", main = mutation, ylim = c(-500, max(Counts)*1.1))
+  plot(Position, Counts, type = "b", pch = data_mutation_plot$REF, col = "black", ylim = c(-500, max(Counts)*1.1))
+
+  title(main = sprintf("%s", mutation),
+        xlab = "Counts",
+        ylab = "Positon",
+        cex.axis = 3, cex.lab = 3, cex.main = 3)
 
   # Second line of plot: ALT sequence. Only the mutation has its letter
   lines(Position, ALT_counts, type = "b", pch = ALT_letters, col = "red")
 
   # Legend always on the right because the mutation will always be at the centre
-  legend("right", legend = c("REF Counts", "ALT Counts"), col = c("black", "red"), lty = 1, cex = 0.5)
+  legend("right", legend = c("REF Counts", "ALT Counts"), col = c("black", "red"), lty = 1, cex = 3)
 
   plot_of_mutation <- recordPlot()
 

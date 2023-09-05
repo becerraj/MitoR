@@ -12,11 +12,11 @@ nueva_ruta <- "/home/efernandez/R/x86_64-pc-linux-gnu-library/4.2"
 # Verificar que la nueva ruta haya sido establecida correctamente
 .libPaths()
 
-library(devtools)
-
 # Configurar la nueva ruta en la variable de entorno R_LIBS_USER
 Sys.setenv(R_LIBS_USER = nueva_ruta)
 Sys.getenv('R_LIBS_USER')
+
+library(devtools)
 
 setwd("~/RStudio/MitoR")
 devtools::build()
@@ -26,10 +26,18 @@ library(MitoR)
 
 #out_cnv<- analyze_cnv()
 
+libPath <- "/home/efernandez/R/x86_64-pc-linux-gnu-library/4.2"
+
 #mitor_sof <- sprintf("%s/mitorDB/Softwares", Sys.getenv('R_LIBS_USER'))
 #mitor_sof <-"/home/efernandez/R/x86_64-pc-linux-gnu-library/4.2/mitorDB/Softwares"
 
-#path_dir <- file.path("/mnt/data/Mitocondrial/Pacientes",basename(select))
+path_dir <- file.path("/mnt/data/Mitocondrial/Pacientes", basename(select))
+add_control_cnv(path_dir)
+
+library(remotes)
+install.packages("ExomeDepth")
+install_github("DaniOrschanski/MitoR")
+
 
 #ERRORRES
 
@@ -45,6 +53,6 @@ library(MitoR)
 
 #40702; No tiene fasta
 
-#46608: no estaba en patients db. Funciona OK
+#46608: no estaba en patients db. Funciona OK. Lo agregue a control DB
 
 #44562: funciona OK.

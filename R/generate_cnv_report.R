@@ -82,13 +82,13 @@ generate_cnv_report <- function(CNV_calls, graph, path_dir, transit, minoverlap)
   setColWidths(wb, sheet = 3, cols = 3:6, widths = "auto")
 
   #Add Plot
-  #print(graph)
-  #insertPlot(wb, 2, xy = c(1, 1), width = 25, height = 18, fileType = "png", units = "cm")
-
-  png("graph.png", width=1024, height=768, units="px", res=144)
   print(graph)
-  dev.off()
-  insertImage(wb, 2, "graph.png", width=1024, height=768, units="px")
+  insertPlot(wb, 2, xy = c(1, 1), width = 25, height = 18, fileType = "png", units = "cm")
+
+  #png("graph.png", width=1024, height=768, units="px", res=144)
+  #print(graph)
+  #dev.off()
+  #insertImage(wb, 2, "graph.png", width=1024, height=768, units="px")
 
 
 

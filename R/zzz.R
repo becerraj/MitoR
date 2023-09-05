@@ -2,9 +2,14 @@
 
   #Import BED file
   data("bedfileMito")
-
+  libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
+  mitor_sof <- sprintf("%s/mitorDB/Softwares", libPath)
+  print(libPath)
+  print(mitor_sof)
   check_packages()
   checkDownloads()
+
+
   message("Installation DONE")
 
   checkHMTVAR_online()
@@ -245,7 +250,7 @@ downloadHG38 <- function(mitor_sof) {
 #' In case it occurs an error because of a missing package on your Linux OS, a message will be displayed on the terminal letting you know which packages must be available to download the software.
 downloadMitoRSoftwares <- function(mitor_sof) {
 
-  libPath <- dirname(system.file(package = "MitoR"))
+  libPath <- dirname(dirname(dirname(system.file(package = "MitoR"))))
   mitor_sof <- sprintf("%s/mitorDB/Softwares", libPath)
 
   required_packages <- checkRequirements()
